@@ -1,0 +1,255 @@
+.attribution { font-size: 11px; text-align: center; margin: 50px 0 0 0;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@font-face {
+    font-family: Inter;
+    src: url(https://fonts.google.com/specimen/Inter);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Inter;
+}
+
+
+
+nav{
+    display: flex;
+    width: 80vw;
+    justify-content: space-between;
+    margin: 30px 0 30px 8% ;
+    align-items:center;
+}
+.menu {
+    display: flex;
+    gap: 30px;
+    color: hsl(236, 13%, 42%);
+}
+.menu2{
+    display: none;
+    cursor: pointer;
+}
+
+.menuMobile{
+    width: 70vw;
+    height: 100vh;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    z-index: 2;
+    background-color: white;
+    color: hsl(236, 13%, 42%);
+    font-size: 20px;
+    font-weight: 500;
+    display: none;
+}
+.menuMobile> div{
+    display: flex;
+    flex-direction: column;
+    justify-content:baseline;
+    padding: 10%;
+    gap:5vh;
+}
+.cross{
+    align-self: flex-end;
+}
+
+.menuMobile> div > p:hover, .cross:hover{
+    cursor: pointer;
+    color: hsl(5, 85%, 63%);
+}
+
+
+.menu > p:hover{
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+
+.container{
+    width: 80vw;
+    margin: 0px 8%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 1f 0.5f 0.5f 1f;
+    gap: 20px;
+}
+
+.heroImg{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.heroImg>img{
+   max-width: 100%;
+    
+}
+
+.new{
+    grid-column: 3;
+    grid-row: 1/ span 3;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 30px 25px;
+    background-color: hsl(240, 100%, 5%);
+    line-height: 25px;
+}
+
+.new > h3:hover{
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+
+
+hr{
+    margin: 15px 0px 25px 0px;
+}
+
+.new>h1{
+    margin-bottom: 30px;
+    color: hsl(35, 77%, 62%);
+}
+
+.new>p{
+    margin: 14px 0;
+    font-size: 15px;
+    color: hsl(236, 13%, 42%);
+
+}
+
+.mainHeading{
+    grid-row: 2 / 4;
+    grid-column: 1;
+    font-size: 55px;
+    font-weight: 900;
+
+}
+
+.para{
+    grid-row: 2 / 4;
+    grid-column: 2;
+    display: flex;
+    font-size: 17px;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.para > p{
+    line-height: 25px;
+    color: hsl(236, 13%, 42%);
+}
+
+.para > button {
+    background-color: hsl(5, 85%, 63%);
+    border: none;
+    width: 45%;
+    height: 40px;
+    font-size: large;
+    font-weight: 600;
+}
+
+.para > button:hover{
+    background-color:hsl(240, 100%, 5%) ;
+    color: white; 
+}
+
+.smallImg{
+    display: none;
+}
+
+.first {
+    grid-row: 4;
+    grid-column: 1;
+    display: flex;
+    margin-top: 20px;
+   
+}
+.second {
+    grid-row: 4;
+    grid-column: 2;
+    display: flex;
+    margin-top: 20px;
+    
+}
+.third {
+    grid-column: 3;
+    grid-row: 4;
+    display: flex;
+    margin-top: 20px;
+}
+
+
+.blog{
+    display: flex;
+    flex-direction: column;
+    margin-left:25px ;
+    font-size: 15px;
+    justify-content: space-between;
+}
+.blog > p{
+    color: hsl(236, 13%, 42%);
+    
+}
+
+.blog > h2{
+    color: hsl(5, 85%, 63%);
+}
+
+.blog > h3:hover{
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+
+.first > img, .second > img, .third > img {
+    height: 100px;
+}
+
+
+
+@media (max-width:1200px){
+    .container{
+        grid-template-columns: 30% 30% 40%;
+    }
+    .mainHeading{
+        font-size: 50px;
+    }
+}
+
+@media (max-width:1000px){
+    .mainHeading{
+        grid-column: 1 / span 2;
+        grid-row: 2;
+    }
+    .para{
+        grid-column: 1 / span 2;
+        grid-row: 3;
+    }
+    .para > button{
+        width: 100%;
+    }
+}
+@media (max-width:800px) {
+    .menu{
+        display: none;
+    }
+
+    .menu2{
+        display: block;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width:600px){
+    .bigImg{
+        display: none;
+    }
+    .smallImg{
+        display: block;
+    }
+}
